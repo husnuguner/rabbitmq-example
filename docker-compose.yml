@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  # For more information about the configuration of the rabbitmq container,
+  # see https://github.com/bitnami/containers/tree/main/bitnami/rabbitmq
+  rabbitmq:
+    container_name: rabbitmq-example
+    hostname: rabbitmq-example
+    image: docker.io/bitnami/rabbitmq:3.10
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    environment:
+      - RABBITMQ_SECURE_PASSWORD=yes
+      - RABBITMQ_MANAGEMENT_ALLOW_WEB_ACCESS=true
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest

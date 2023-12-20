@@ -1,0 +1,6 @@
+venv/
+
+.idea/
+*.iml
+.eggs/
+*.egg-info/
